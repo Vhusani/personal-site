@@ -1098,7 +1098,7 @@ a{
 .page-ajax-loaded {
   display: none;
   position: absolute;
-  background: #333;
+  background: #333333f2;
   top: 0;
   bottom: 0;
   right: 0;
@@ -1195,7 +1195,7 @@ a{
 }
 .meimage{
   width: 80px;
-    object-fit: cover;
+    object-fit: contain;
     height: 80px;
     border-radius: 50%;
 }
