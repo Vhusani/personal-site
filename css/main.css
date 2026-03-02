@@ -1141,13 +1141,14 @@ a{
 }
 
 .portfolio-filters li a:hover {
-  background-color: #eee;
+  background-color: #eeeeee00;
 }
 
 .portfolio-filters li.active a,
 .portfolio-filters li.active a:hover {
   background-color: #ffc107;
   color: #fff;
+  border-radius: 5px;
 }
 .portfolio-filters li.active a{
   color: #fff !important;
@@ -1251,6 +1252,105 @@ a{
   box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
 }
 /* End of Direction-Aware Hover Effect */
+
+/* =======================================
+Text-based portfolio cards
+======================================= */
+.portfolio-grid figure.text-card a {
+  background: #111111;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  min-height: 180px;
+}
+.portfolio-grid figure.text-card a:hover {
+  border-color: #ffc107;
+  box-shadow: 0 4px 16px rgba(255,193,7,0.1);
+}
+/* Reset ALL divs inside text-card figures — the base rule targets every div */
+.portfolio-grid figure.text-card a div {
+  position: static !important;
+  left: auto !important;
+  top: auto !important;
+  background: transparent !important;
+  width: auto !important;
+  height: auto !important;
+  transition: none !important;
+  padding: 0 !important;
+  color: inherit !important;
+}
+.portfolio-grid figure.text-card a:hover div {
+  left: auto !important;
+}
+/* Restore padding on the outer wrapper */
+.portfolio-grid figure.text-card a div.text-card-inner {
+  padding: 18px 16px !important;
+}
+.text-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.text-card-category {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #ffc107;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+.text-card-date {
+  font-size: 10px;
+  color: #888;
+  text-align: right;
+  white-space: nowrap;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+.portfolio-grid figure.text-card a div h5.text-card-title {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  margin: 0 0 8px 0 !important;
+  text-transform: none !important;
+  display: block !important;
+  text-shadow: none !important;
+  line-height: 1.4 !important;
+}
+.portfolio-grid figure.text-card a div h5.text-card-title:after {
+  display: none !important;
+}
+.text-card-desc {
+  font-size: 11px;
+  color: #aaa;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.text-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.portfolio-grid figure.text-card a div span.text-card-tag {
+  display: inline-block !important;
+  padding: 2px 7px !important;
+  text-transform: none !important;
+  font-weight: 400 !important;
+  font-size: 10px !important;
+  color: #bbb !important;
+  background: rgba(255,255,255,0.07) !important;
+  border-radius: 10px !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  margin: 0 !important;
+}
 
 /* =======================================
 7.4. Blog subpage
@@ -1687,6 +1787,7 @@ a{
   margin: 0 7px 0 0;
   padding: 0;
   width: 28px;
+  border-radius: 5px !important;
   height: 28px;
   color: #888;
   background-color: #eee;
