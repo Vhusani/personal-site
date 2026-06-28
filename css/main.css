@@ -765,7 +765,7 @@ ul.social-links li:last-child a {
   color: #fff;
 }
 a{
- color: #ffc107; 
+ color: #4f46e5; 
 }
 
 .info-list li .title:after {
@@ -773,7 +773,7 @@ a{
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #ffc107;
+  background-color: #4f46e5;
 }
 
 .info-list li .value {
@@ -974,7 +974,7 @@ a{
   line-height: 1.1em;
   margin: 0 0 3px;
   box-shadow: 0 2px 2px 0 #4d4d4f14, 0 0 2px 0 #4d4d4f29;
-  background-color: #ffc107;
+  background-color: #4f46e5;
   padding: 5px 8px 5px 8px;
   margin-left: 0px;
 }
@@ -1146,7 +1146,7 @@ a{
 
 .portfolio-filters li.active a,
 .portfolio-filters li.active a:hover {
-  background-color: #ffc107;
+  background-color: #4f46e5;
   color: #fff;
   border-radius: 5px;
 }
@@ -1154,7 +1154,7 @@ a{
   color: #fff !important;
 }
 .active a{
-  color: #ffc107  !important;
+  color: #4f46e5  !important;
 }
 /* Direction-Aware Hover Effect */
 .portfolio-grid figure a div {
@@ -1222,7 +1222,7 @@ a{
   width: 100%;
   height: 2px;
   margin: 0 auto;
-  background-color: #ffc107;
+  background-color: #4f46e5;
 }
 .portfolio-grid figure a div small {
   color: #eee;
@@ -1260,12 +1260,7 @@ Text-based portfolio cards
   background: #111111;
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: 6px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   min-height: 180px;
-}
-.portfolio-grid figure.text-card a:hover {
-  border-color: #ffc107;
-  box-shadow: 0 4px 16px rgba(255,193,7,0.1);
 }
 /* Reset ALL divs inside text-card figures — the base rule targets every div */
 .portfolio-grid figure.text-card a div {
@@ -1295,7 +1290,7 @@ Text-based portfolio cards
 .text-card-category {
   font-size: 10px;
   text-transform: uppercase;
-  color: #ffc107;
+  color: #4f46e5;
   font-weight: 600;
   letter-spacing: 0.5px;
   line-height: 1.4;
@@ -1759,6 +1754,27 @@ Text-based portfolio cards
   margin-bottom: 20px;
 }
 
+.portfolio-screenshots {
+  margin-top: 10px;
+}
+
+.portfolio-screenshots > div {
+  margin-bottom: 20px;
+}
+
+.portfolio-screenshots img {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.portfolio-screenshots .screenshot-caption {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+}
+
 .project-general-info {
   list-style: none;
   padding: 0;
@@ -2199,4 +2215,264 @@ blockquote {
 /* v2.2 - 14 June 2019 */
 .pt-page {
   opacity: 1;
+}
+
+/* =============================================================================
+DARK THEME
+============================================================================= */
+
+/* -- Core backgrounds -- */
+html, body {
+  background-color: #0d1117;
+}
+
+.site-main {
+  background-color: #11161d !important;
+  border-left: 1px solid rgba(99, 102, 241, 0.15) !important;
+  box-shadow: -4px 0 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+.my-photo {
+  background: #0b0e14 !important;
+}
+
+.header {
+  background: transparent;
+}
+
+/* -- Typography -- */
+.site-title {
+  font-size: 24px !important;
+  letter-spacing: 0.02em !important;
+}
+
+p.site-description {
+  color: #94a3b8 !important;
+  font-size: 14px !important;
+}
+
+/* -- Accent color: indigo -- */
+.section-title {
+  background: #4f46e5 !important;
+}
+
+.block-title h3:after {
+  background-color: #6366f1 !important;
+}
+
+/* -- Navigation -- */
+.site-nav {
+  background: transparent;
+}
+
+.site-main-menu li a,
+.site-main-menu li a:hover {
+  color: #cbd5e1 !important;
+  font-size: 14px !important;
+}
+
+.site-main-menu li a:hover:after,
+.site-main-menu li.active a:after {
+  background-color: #818cf8 !important;
+}
+
+.site-main-menu li.active a:after {
+  background-color: #6366f1 !important;
+}
+
+/* -- Social links -- */
+ul.social-links li a {
+  background-color: rgba(99, 102, 241, 0.12) !important;
+  color: #a5b4fc !important;
+}
+
+ul.social-links li a:hover {
+  background-color: #6366f1 !important;
+  color: #fff !important;
+}
+
+/* -- Accent: links -- */
+a {
+  color: #818cf8 !important;
+}
+
+a:hover {
+  color: #a5b4fc !important;
+}
+
+.info-list li .title:after {
+  background-color: #6366f1 !important;
+}
+
+.event-date {
+  background: #4f46e5 !important;
+  font-size: 12px !important;
+}
+
+/* -- Skill badges -- */
+.skill {
+  background: rgba(99, 102, 241, 0.06) !important;
+  border: 1px solid rgba(99, 102, 241, 0.25) !important;
+  border-radius: 4px !important;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.skill h5 {
+  color: #cbd5e1 !important;
+  font-size: 12px !important;
+}
+
+.skill:hover {
+  background: rgba(99, 102, 241, 0.18) !important;
+  border-color: #6366f1 !important;
+}
+
+.skill:hover h5 {
+  color: #fff !important;
+}
+
+/* -- Portfolio filters -- */
+.portfolio-filters li a {
+  color: #94a3b8 !important;
+  font-size: 12px !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase;
+}
+
+.portfolio-filters li.active a,
+.portfolio-filters li.active a:hover {
+  background: #4f46e5 !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+}
+
+/* -- Portfolio text cards -- */
+.portfolio-grid figure.text-card a {
+  background: #161b24 !important;
+  border: 1px solid rgba(99, 102, 241, 0.15) !important;
+  border-radius: 8px !important;
+}
+
+.text-card-category {
+  color: #818cf8 !important;
+  letter-spacing: 0.04em !important;
+  font-size: 11px !important;
+}
+
+.text-card-date {
+  color: #64748b !important;
+  font-size: 11px !important;
+}
+
+.portfolio-grid figure.text-card a div h5.text-card-title {
+  color: #f1f5f9 !important;
+  font-size: 15px !important;
+}
+
+.text-card-desc {
+  color: #a3acba !important;
+  font-size: 13px !important;
+}
+
+.portfolio-grid figure.text-card a div span.text-card-tag {
+  background: rgba(99, 102, 241, 0.12) !important;
+  border: 1px solid rgba(99, 102, 241, 0.25) !important;
+  color: #c7d2fe !important;
+  border-radius: 4px !important;
+  font-size: 11px !important;
+}
+
+/* -- Buttons -- */
+input[type=submit], input[type=button], button, a.button {
+  background: #4f46e5 !important;
+  border: 1px solid #4f46e5 !important;
+  font-size: 13px !important;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+input[type=submit]:hover, button:hover, a.button:hover {
+  background: #6366f1 !important;
+  transform: translateY(-1px);
+}
+
+/* -- Skill bars -- */
+.skill-container {
+  border-color: rgba(99, 102, 241, 0.25) !important;
+  background: rgba(99, 102, 241, 0.05) !important;
+}
+
+.skill-percentage {
+  background: #4f46e5 !important;
+}
+
+/* -- Preloader -- */
+.dot1, .dot2 {
+  background-color: #6366f1 !important;
+}
+
+/* -- Mobile header -- */
+@media only screen and (max-width: 991px) {
+  .header {
+    background-color: #0b0e14 !important;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.2) !important;
+  }
+
+  .site-nav {
+    background-color: #11161d !important;
+    border-top: 1px solid rgba(99, 102, 241, 0.15) !important;
+  }
+}
+
+/* -- Scrollbar -- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.35);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
+
+/* -- Profile image ring -- */
+.meimage {
+  border: 2px solid rgba(99, 102, 241, 0.4) !important;
+}
+
+.my-photo-small img {
+  border: 2px solid rgba(99, 102, 241, 0.4) !important;
+}
+
+/* -- Section description / muted text -- */
+.section-description {
+  color: #8a94a3 !important;
+}
+
+.event-description {
+  color: #8a94a3 !important;
+}
+
+/* -- Page close button -- */
+.portfolio-nav .portfolio-close-button a {
+  background-color: rgba(99, 102, 241, 0.12) !important;
+  color: #a5b4fc !important;
+}
+
+.portfolio-nav .portfolio-close-button a:hover {
+  background-color: #6366f1 !important;
+  color: #fff !important;
+}
+
+/* -- Preloader background -- */
+.preloader {
+  background: #0d1117 !important;
+}
+
+/* -- Page loaded overlay -- */
+.page-ajax-loaded {
+  background: rgba(13, 17, 23, 0.97) !important;
 }
