@@ -1,0 +1,34 @@
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 36px;
+  border-top: var(--border-strong);
+  border-bottom: var(--border-strong);
+}
+
+.button {
+  appearance: none;
+  border: 0;
+  border-right: var(--border-hairline);
+  cursor: var(--cursor-reticle-active);
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: var(--tracking-nav);
+  text-transform: uppercase;
+  padding: 14px 18px;
+  background: transparent;
+  color: var(--color-text-dim);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.button:hover {
+  color: var(--color-accent-hover);
+  text-shadow: var(--glow-accent-hover);
+}
+
+.active,
+.active:hover {
+  background: var(--color-accent-deep);
+  color: var(--color-on-accent);
+}

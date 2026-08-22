@@ -1,0 +1,88 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  background: var(--color-surface);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: background 0.15s ease;
+
+  /* Reset button chrome — this is a full-bleed tile, not a control. */
+  appearance: none;
+  margin: 0;
+
+  /* Each tile draws the grid rule to its right and below; the grid container
+     closes the remaining top and left edges. */
+  border: 0;
+  border-right: var(--border-strong);
+  border-bottom: var(--border-strong);
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  cursor: var(--cursor-reticle-active);
+}
+
+.card:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.kicker {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  text-shadow: var(--glow-accent);
+}
+
+.date {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-fainter);
+  white-space: nowrap;
+}
+
+.title {
+  font-size: 25px;
+}
+
+.body {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--color-text-dim);
+  text-wrap: pretty;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.cue {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: var(--tracking-nav);
+  text-transform: uppercase;
+  color: var(--color-text-fainter);
+  transition: color 0.15s ease;
+}
+
+.card:hover .cue,
+.card:focus-visible .cue {
+  color: var(--color-accent);
+  text-shadow: var(--glow-accent);
+}

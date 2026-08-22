@@ -1,0 +1,127 @@
+import { ALL_FILTER, type Project, type ProjectFilter } from '@/types';
+
+export const projects: Project[] = [
+  {
+    id: 'thesouthmart',
+    kicker: 'Full-Stack / DevOps',
+    date: 'Aug 2020 – Jan 2025',
+    title: 'Thesouthmart Marketplace',
+    body: 'High-performance marketplace connecting local suppliers with buyers across South Africa, featuring AI-driven search, vendor management, and automated CI/CD infrastructure.',
+    tech: ['.NET 7/8', 'Angular 17+', 'Elasticsearch', 'Docker', 'GitHub Actions'],
+    tags: ['Professional', 'C#', 'Typescript'],
+  },
+  {
+    id: 'tillapos',
+    kicker: 'Full-Stack / Desktop',
+    date: '2025',
+    title: 'TillaPOS',
+    body: 'Offline-first point of sale desktop app for South African retailers — sell, manage stock, run loyalty and reporting, even without an internet connection.',
+    tech: ['Angular 19', 'Electron', 'better-sqlite3', '.NET 7', 'JWT'],
+    tags: ['Professional', 'C#', 'Typescript'],
+  },
+  {
+    id: 'tillapos-website',
+    kicker: 'Front-End / SSR',
+    date: '2025',
+    title: 'TillaPOS Website',
+    body: 'Server-side rendered marketing site for TillaPOS — features, pricing, demo and FAQs, built for fast load and SEO.',
+    tech: ['Angular 18 SSR', 'Tailwind CSS', 'Express', 'Docker'],
+    tags: ['Professional', 'Front-End', 'Typescript'],
+  },
+  {
+    id: 'thesouthmart-news',
+    kicker: 'WordPress / Content',
+    date: '2025',
+    title: 'Thesouthmart News',
+    body: 'News and content hub for the Thesouthmart marketplace — articles on collectibles, buying/selling guides, and platform updates that feed traffic back into the marketplace.',
+    tech: ['WordPress', 'PHP', 'MySQL'],
+    tags: ['Professional'],
+  },
+  {
+    id: 'cc-dashboard',
+    kicker: 'Full-Stack',
+    date: 'Feb 2024 – Nov 2025',
+    title: 'Cash Crusaders User Dashboard',
+    body: 'Full rebuild of the client dashboard for managing orders, loans, and laybys — replacing an unstable legacy system with a scalable, maintainable platform used across South Africa.',
+    tech: ['.NET 7', 'Angular 16', 'OAuth2', 'Docker', 'Dapper'],
+    tags: ['Professional', 'C#', 'Typescript'],
+  },
+  {
+    id: 'cash2cache',
+    kicker: 'Full-Stack / Fintech',
+    date: 'Aug 2022 – Jun 2023',
+    title: 'Cash2Cache',
+    body: 'Fintech platform streamlining cash collection and management for businesses, with hardware integrations for money safes and cash counters.',
+    tech: ['PHP', 'Slim Framework', 'Angular', 'Ionic', 'Docker'],
+    tags: ['Professional', 'Typescript'],
+  },
+  {
+    id: 'dotnet-api',
+    kicker: 'C# / Backend',
+    date: 'Feb 2025',
+    title: '.NET Web API',
+    body: 'Personal project exploring RESTful API design patterns with .NET and MySQL.',
+    tech: ['C#', '.NET', 'MySQL'],
+    tags: ['C#'],
+  },
+  {
+    id: 'survey-app',
+    kicker: 'TypeScript / Angular',
+    date: 'Sep 2022',
+    title: 'Survey App',
+    body: 'Angular app that captures user survey responses and stores them in a NoSQL Firebase database.',
+    tech: ['Angular', 'TypeScript', 'Firebase', 'NoSQL'],
+    tags: ['Typescript'],
+  },
+  {
+    id: 'snake-bite',
+    kicker: 'JavaScript / Game',
+    date: '2021',
+    title: 'Snake Bite',
+    body: 'Classic snake game built with vanilla JavaScript using HTML5 canvas rendering and a custom game loop.',
+    tech: ['JavaScript', 'HTML5 Canvas'],
+    tags: ['JavaScript', 'Front-End'],
+  },
+  {
+    id: 'digital-lab',
+    kicker: 'Front-End',
+    date: '2020',
+    title: 'Digital Lab Landing Page',
+    body: 'Responsive landing page built with HTML, CSS, and JavaScript.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    tags: ['Front-End', 'JavaScript'],
+  },
+  {
+    id: 'cube',
+    kicker: 'SQL / T-SQL',
+    date: '',
+    title: 'Cube',
+    body: 'SQL scripts for building OLAP cubes and analytical data structures in SQL Server.',
+    tech: ['T-SQL', 'MSSQL'],
+    tags: ['SQL'],
+  },
+  {
+    id: 'database-scripts',
+    kicker: 'SQL / T-SQL',
+    date: '',
+    title: 'Database Scripts',
+    body: 'Collection of SQL scripts for schema design, stored procedures, and data management in SQL Server.',
+    tech: ['T-SQL', 'MSSQL'],
+    tags: ['SQL'],
+  },
+];
+
+/** Filter bar options, in the order the original rendered them. */
+export const projectFilters: ProjectFilter[] = [
+  ALL_FILTER,
+  'Professional',
+  'C#',
+  'Typescript',
+  'JavaScript',
+  'Front-End',
+  'SQL',
+];
+
+export function filterProjects(list: Project[], filter: ProjectFilter): Project[] {
+  return filter === ALL_FILTER ? list : list.filter((p) => p.tags.includes(filter));
+}

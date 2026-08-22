@@ -1,0 +1,100 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: clamp(16px, 5vh, 64px) clamp(16px, 4vw, 40px);
+  background: rgba(9, 8, 8, 0.78);
+  overflow-y: auto;
+  animation: fade 0.16s ease-out;
+}
+
+.dialog {
+  position: relative;
+  width: min(760px, 100%);
+  background: var(--color-surface);
+  border: var(--border-strong);
+  animation: rise 0.2s ease-out;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: clamp(24px, 4vw, 36px);
+  border-bottom: var(--border-strong);
+  /* Keeps the title and close button reachable while the body scrolls. */
+  position: sticky;
+  top: 0;
+  background: var(--color-surface);
+  z-index: 1;
+}
+
+.headings {
+  min-width: 0;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  text-shadow: var(--glow-accent);
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: clamp(24px, 3.2vw, 34px);
+}
+
+.close {
+  flex: 0 0 auto;
+  appearance: none;
+  background: transparent;
+  border: var(--border-strong);
+  color: var(--color-text);
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: var(--cursor-reticle-active);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.close:hover {
+  background: var(--color-accent-deep);
+  border-color: var(--color-accent-deep);
+  color: var(--color-on-accent);
+}
+
+.content {
+  padding: clamp(24px, 4vw, 36px);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop,
+  .dialog {
+    animation: none;
+  }
+}

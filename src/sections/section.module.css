@@ -1,0 +1,12 @@
+/* Shared section chrome: fluid padding plus the heavy dividing rule. */
+.section {
+  padding: var(--section-pad-y-top) var(--section-pad-x) var(--section-pad-y-bottom);
+  border-bottom: var(--border-strong);
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

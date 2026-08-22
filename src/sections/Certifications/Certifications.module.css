@@ -1,0 +1,93 @@
+.section {
+  composes: section from '../section.module.css';
+}
+
+.heading {
+  font-size: var(--size-heading);
+}
+
+.intro {
+  margin-top: 20px;
+  max-width: 60ch;
+  font-size: 16px;
+  color: var(--color-text-dim);
+}
+
+/* Same border scheme as the projects grid: each card owns its right and
+   bottom rule, the container closes the top and left. A partial final row
+   simply ends rather than leaving a filled cell. */
+.grid {
+  list-style: none;
+  margin: 36px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(210px, 100%), 1fr));
+  border-top: var(--border-strong);
+  border-left: var(--border-strong);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  height: 100%;
+  padding: 26px 24px;
+  background: var(--color-surface);
+  border-right: var(--border-strong);
+  border-bottom: var(--border-strong);
+  text-decoration: none;
+  color: var(--color-text);
+  text-shadow: none;
+  transition: background 0.15s ease;
+}
+
+.card:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.badge {
+  width: 104px;
+  height: 104px;
+  object-fit: contain;
+  margin-bottom: 14px;
+  /* Credly artwork is bright against this dark surface; a slight knock-back
+     keeps it from overpowering the type, restored on hover. */
+  opacity: 0.88;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover .badge,
+.card:focus-visible .badge {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.name {
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+}
+
+.meta {
+  margin-top: auto;
+  padding-top: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-fainter);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge {
+    transition: none;
+  }
+  .card:hover .badge,
+  .card:focus-visible .badge {
+    transform: none;
+  }
+}

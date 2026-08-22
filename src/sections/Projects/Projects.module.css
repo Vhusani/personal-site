@@ -1,0 +1,28 @@
+.section {
+  composes: section from '../section.module.css';
+}
+
+.heading {
+  font-size: var(--size-heading);
+}
+
+.intro {
+  margin-top: 20px;
+  max-width: 60ch;
+  font-size: 16px;
+  color: var(--color-text-dim);
+}
+
+/**
+ * Grid rules are drawn as real borders: each card owns its right and bottom
+ * edge, and the container closes the top and left. A background-bleed grid
+ * (gap over a light backdrop) is not used here because a partial final row
+ * leaves the vacant cell showing that backdrop as a filled block.
+ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  margin-top: 2px;
+  border-top: var(--border-strong);
+  border-left: var(--border-strong);
+}

@@ -1,0 +1,21 @@
+.section {
+  composes: section from '../section.module.css';
+}
+
+.heading {
+  font-size: var(--size-heading);
+}
+
+.headingSpaced {
+  margin-top: 64px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  /* Row gap is larger so wrapped rows of tags stay visually separated. */
+  gap: 14px 10px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}

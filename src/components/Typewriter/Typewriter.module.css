@@ -1,0 +1,51 @@
+/**
+ * All phrases occupy the same grid cell. The invisible sizers give the cell
+ * the height of the tallest phrase, so swapping text never reflows the page.
+ */
+.wrap {
+  display: grid;
+}
+
+.sizer,
+.live {
+  grid-area: 1 / 1;
+}
+
+.sizer {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.live {
+  /* Without this the cell collapses when the string is momentarily empty. */
+  min-height: 1em;
+}
+
+.caret {
+  display: inline-block;
+  width: 0.055em;
+  min-width: 2px;
+  height: 0.78em;
+  margin-left: 0.06em;
+  background: var(--color-accent);
+  box-shadow: var(--glow-accent);
+  /* steps(1) gives a hard on/off blink rather than a fade. */
+  animation: blink 1.05s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .caret {
+    animation: none;
+  }
+}

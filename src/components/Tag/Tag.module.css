@@ -1,0 +1,20 @@
+.tag {
+  border: 1px solid var(--color-rule-tag);
+  font-weight: 600;
+  color: rgba(240, 238, 236, 0.85);
+}
+
+.md {
+  padding: 8px 12px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.sm {
+  border-color: var(--color-rule-tag-sm);
+  padding: 5px 9px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+}

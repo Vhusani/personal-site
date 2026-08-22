@@ -1,0 +1,148 @@
+.rail {
+  flex: 0 1 var(--rail-width);
+  max-width: 100%;
+  align-self: flex-start;
+  padding: 40px 28px 32px;
+  border-right: var(--border-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+@media (min-width: 800px) {
+  .rail {
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 799px) {
+  .rail {
+    flex-basis: 100%;
+    border-right: 0;
+    border-bottom: var(--border-strong);
+  }
+}
+
+.photoFrame {
+  width: 104px;
+  height: 104px;
+  overflow: hidden;
+  border: var(--border-strong);
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-size: var(--size-name);
+  letter-spacing: -0.03em;
+}
+
+.role {
+  margin-top: 12px;
+  font-size: 13px;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  text-shadow: var(--glow-accent);
+  font-weight: 600;
+}
+
+.location {
+  margin-top: 6px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+.availability {
+  margin-top: 16px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  border-top: var(--border-strong);
+}
+
+.navLink {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: var(--border-hairline);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  text-shadow: none;
+  transition: color 0.15s ease;
+}
+
+.navLink:hover {
+  color: var(--color-accent-hover);
+  text-shadow: var(--glow-accent-hover);
+}
+
+.navLinkActive {
+  color: var(--color-accent);
+  text-shadow: var(--glow-accent);
+}
+
+.navNum {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-nav);
+  color: var(--color-text-fainter);
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  letter-spacing: var(--tracking-nav);
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text);
+  text-shadow: none;
+  transition: color 0.15s ease;
+}
+
+.socialLink:hover {
+  color: var(--color-accent);
+  text-shadow: var(--glow-accent);
+}
+
+/* Icons are sized in em, so this font-size sets them without touching the
+   label's own 13px. flex-shrink is pinned so long labels never squash them. */
+.socialIcon {
+  font-size: 15px;
+  flex: 0 0 auto;
+}
+
+/* Pushed to the far edge so the labels stay left-aligned with the icons. */
+.socialArrow {
+  margin-left: auto;
+  color: var(--color-text-fainter);
+  transition: color 0.15s ease;
+}
+
+.socialLink:hover .socialArrow {
+  color: inherit;
+}

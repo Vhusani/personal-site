@@ -1,0 +1,97 @@
+/**
+ * Design tokens extracted from the original single-file portfolio.
+ * Every colour, rule weight and rhythm value used by the components
+ * resolves back to one of these, so the theme is changed in one place.
+ */
+:root {
+  /* Surfaces */
+  --color-bg: #131211;
+  --color-surface: #1a1918;
+  --color-surface-hover: #221f1e;
+
+  /* Ink */
+  --color-text: #f0eeec;
+  --color-text-bright: #f7f4f2;
+  --color-text-muted: rgba(240, 238, 236, 0.78);
+  --color-text-dim: rgba(240, 238, 236, 0.65);
+  --color-text-faint: rgba(240, 238, 236, 0.5);
+  --color-text-fainter: rgba(240, 238, 236, 0.45);
+
+  /**
+   * Accent. Keep each hex and its -rgb triplet in sync: the triplet is what
+   * every translucent variant below is built from, so the colour is stated
+   * once per shade rather than repeated at each alpha.
+   */
+  --color-accent: #cddc39;
+  --color-accent-rgb: 205, 220, 57;
+  --color-accent-hover: #dfe87e;
+  --color-accent-hover-rgb: 223, 232, 126;
+  --color-accent-deep: #afb42b;
+
+  /**
+   * Ink for text sitting ON an accent fill. This accent is light (12.4:1
+   * against the page background), so anything on top of it must be dark —
+   * near-white on the deep shade measures 2.04:1 and is unreadable.
+   */
+  --color-on-accent: #131211;
+
+  --color-selection: rgba(var(--color-accent-rgb), 0.35);
+  --color-accent-soft: rgba(var(--color-accent-rgb), 0.1);
+  --color-accent-line: rgba(var(--color-accent-rgb), 0.45);
+
+  /**
+   * Accent glow. Two layers — a tight core and a wider halo — so it reads as
+   * emitted light rather than a blurred copy of the text. Alpha is kept low
+   * deliberately: it should be felt more than seen.
+   */
+  --glow-accent: 0 0 8px rgba(var(--color-accent-rgb), 0.35),
+    0 0 20px rgba(var(--color-accent-rgb), 0.14);
+  --glow-accent-hover: 0 0 8px rgba(var(--color-accent-hover-rgb), 0.42),
+    0 0 22px rgba(var(--color-accent-hover-rgb), 0.16);
+
+  /* Rules */
+  --color-rule-strong: rgba(240, 238, 236, 0.28);
+  --color-rule: rgba(240, 238, 236, 0.16);
+  --color-rule-tag: rgba(240, 238, 236, 0.3);
+  --color-rule-tag-sm: rgba(240, 238, 236, 0.24);
+  --border-strong: 2px solid var(--color-rule-strong);
+  --border-hairline: 1px solid var(--color-rule);
+
+  /* Type */
+  --font-sans: 'Archivo', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --tracking-label: 0.16em;
+  --tracking-eyebrow: 0.14em;
+  --tracking-nav: 0.1em;
+
+  /* Fluid sizing */
+  /**
+   * Sized so the longest rotating headline stays on ONE line — measured at
+   * 19.255em in Archivo 800, with ~7% slack. Two lines would make the About
+   * heading reserve height for a wrap that is usually empty.
+   * This vw form is the fallback; the cqi form in About.module.css is exact.
+   */
+  --size-display: clamp(22px, calc(4.4vw - 12.5px), 58px);
+  --size-heading: clamp(32px, 3.4vw, 50px);
+  --size-footer-heading: clamp(34px, 4vw, 60px);
+  --size-name: clamp(28px, 3vw, 34px);
+
+  /**
+   * Cursors. A reticle rather than an arrow, matching the accent. Each is
+   * drawn twice — a dark halo beneath a lime stroke — so it stays legible on
+   * the dark page AND on the lime footer band. Hotspot is dead centre (12 12).
+   * `crosshair`/`pointer` are the fallbacks for engines that refuse SVG
+   * cursors, so the intent survives even when the artwork does not.
+   */
+  --cursor-reticle: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%202v6M12%2016v6M2%2012h6M16%2012h6'%20fill%3D'none'%20stroke%3D'%23131211'%20stroke-width%3D'3.5'%2F%3E%3Cpath%20d%3D'M12%202v6M12%2016v6M2%2012h6M16%2012h6'%20fill%3D'none'%20stroke%3D'%23cddc39'%20stroke-width%3D'1.5'%2F%3E%3Ccircle%20cx%3D'12'%20cy%3D'12'%20r%3D'2'%20fill%3D'%23131211'%2F%3E%3Ccircle%20cx%3D'12'%20cy%3D'12'%20r%3D'1'%20fill%3D'%23cddc39'%2F%3E%3C%2Fsvg%3E") 12 12, crosshair;
+  --cursor-reticle-active: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20width%3D'24'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%3E%3Cpath%20d%3D'M12%201v3M12%2020v3M1%2012h3M20%2012h3'%20fill%3D'none'%20stroke%3D'%23131211'%20stroke-width%3D'3.5'%2F%3E%3Ccircle%20cx%3D'12'%20cy%3D'12'%20r%3D'6'%20fill%3D'none'%20stroke%3D'%23131211'%20stroke-width%3D'3.5'%2F%3E%3Cpath%20d%3D'M12%201v3M12%2020v3M1%2012h3M20%2012h3'%20fill%3D'none'%20stroke%3D'%23cddc39'%20stroke-width%3D'1.5'%2F%3E%3Ccircle%20cx%3D'12'%20cy%3D'12'%20r%3D'6'%20fill%3D'none'%20stroke%3D'%23cddc39'%20stroke-width%3D'1.5'%2F%3E%3Ccircle%20cx%3D'12'%20cy%3D'12'%20r%3D'2.4'%20fill%3D'%23131211'%2F%3E%3Ccircle%20cx%3D'12'%20cy%3D'12'%20r%3D'1.4'%20fill%3D'%23cddc39'%2F%3E%3C%2Fsvg%3E") 12 12, pointer;
+
+  /* Layout */
+  --layout-max: 1560px;
+  --rail-width: 260px;
+  --section-pad-y-top: clamp(40px, 5vw, 64px);
+  --section-pad-y-bottom: clamp(48px, 6vw, 72px);
+  --section-pad-x: clamp(24px, 4vw, 56px);
+
+  /* Breakpoints are documented here but must be literal in @media queries. */
+  /* --bp-rail: 800px; --bp-mobile: 640px; */
+}

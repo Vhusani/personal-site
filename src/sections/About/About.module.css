@@ -1,0 +1,53 @@
+.section {
+  composes: section from '../section.module.css';
+  /* Lets the heading size itself from the real content width rather than
+     from the viewport, which the sidebar and padding both eat into. */
+  container-type: inline-size;
+}
+
+.heading {
+  font-size: var(--size-display);
+  /* 5.19cqi would fill the container exactly; 4.8 leaves a safety margin.
+     Ignored by browsers without container query units, which use the
+     viewport-based fallback above. */
+  font-size: clamp(22px, 4.8cqi, 58px);
+}
+
+.bio {
+  margin-top: 28px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  text-wrap: pretty;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0;
+  margin: 48px 0 0;
+  border-top: var(--border-strong);
+}
+
+.detail {
+  padding: 20px 24px 20px 0;
+  border-bottom: var(--border-hairline);
+}
+
+.detailLabel {
+  font-size: 11px;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-text-fainter);
+  font-weight: 600;
+}
+
+.detailValue {
+  margin: 6px 0 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.detailLink {
+  text-decoration: none;
+}
