@@ -12,7 +12,7 @@ import type { ProjectDetails, ProjectId } from '@/types';
 export const projectDetails: Record<ProjectId, ProjectDetails> = {
   "thesouthmart": {
     sourceDate: "September 2020 – Present",
-    overview: "Thesouthmart is a high-performance marketplace connecting local suppliers with buyers across South Africa. It features inventory management, smart search with Elasticsearch, and a responsive, scalable design. The platform is built with performance, reliability, and modern DevOps practices in mind.",
+    overview: "Thesouthmart is a high performance marketplace linking local suppliers to buyers all over South Africa. With inventory management, smart search with Elasticsearch, and a responsive, scalable design. The platform is built for performance, reliability and modern DevOps practices.",
     stack: [
       ".NET 7/8",
       "Angular 17+",
@@ -45,7 +45,7 @@ export const projectDetails: Record<ProjectId, ProjectDetails> = {
   },
   "tillapos": {
     sourceDate: "2025",
-    overview: "TillaPOS is an offline-first point-of-sale desktop application for South African retailers, built on top of the existing Thesouthmart platform. It lets store staff sell in person, manage stock, run a loyalty programme, and report on takings — all while keeping working even when the internet connection drops, then syncing automatically once back online.",
+    overview: "TillaPOS is a desktop based point-of-sale application designed for retailers in South Africa and is built upon the existing Thesouthmart platform. It enables shop staff to sell goods face to face, manage inventory, operate a loyalty programme and produce reports on sales, all while continuing to function even if the internet connection fails and then automatically synchronising itself when the connection is restored.",
     stack: [
       "Angular 19",
       "Electron",
@@ -74,7 +74,7 @@ export const projectDetails: Record<ProjectId, ProjectDetails> = {
   },
   "tillapos-website": {
     sourceDate: "2025",
-    overview: "The public marketing site for TillaPOS, the point-of-sale software built for South African retailers. It introduces the product, breaks down features and pricing, and walks visitors through a demo and FAQs before pointing them to sign up — the front door for the TillaPOS desktop app.",
+    overview: "This is the landing page for the public marketing site for TillaPOS, a point of sale system for South African retailers. It serves to introduce the product, explain features and pricing, walk the user thorough a demo and FAQs, and ultimately drive users to sign up for the desktop application.",
     stack: [
       "Angular 18",
       "Angular SSR",
@@ -96,7 +96,7 @@ export const projectDetails: Record<ProjectId, ProjectDetails> = {
   },
   "thesouthmart-news": {
     sourceDate: "2025",
-    overview: "Thesouthmart News is the content and news hub for the Thesouthmart marketplace, publishing articles on buying and selling collectibles, watches, jewellery, coins, and art, alongside platform updates and buyer-protection guidance. It acts as the SEO and content arm that funnels readers back into the core marketplace.",
+    overview: "Thesouthmart News is the news section of the marketplace that covers the latest articles on collecting and trading collectibles, watches, jewellery, coins, art, updates on the marketplace itself, and advice on how to trade safely. It serves as an SEO resource and an article that draws traffic back to the marketplace.",
     stack: [
       "WordPress",
       "PHP",
@@ -172,7 +172,9 @@ export const projectDetails: Record<ProjectId, ProjectDetails> = {
       "MySQL",
     ],
     highlights: [],
-    links: [],
+    links: [
+      { label: "https://github.com/Vhusani/dotnetwebapi", href: "https://github.com/Vhusani/dotnetwebapi" },
+    ],
   },
   "survey-app": {
     sourceDate: "September, 2022",
@@ -221,7 +223,9 @@ export const projectDetails: Record<ProjectId, ProjectDetails> = {
       "Microsoft SQL Server Management Studio",
     ],
     highlights: [],
-    links: [],
+    links: [
+      { label: "https://github.com/Vhusani/Services-intergration_Reports_Cube_Rollup/blob/gh-pages/Cube/Cube%26Rollup.sql", href: "https://github.com/Vhusani/Services-intergration_Reports_Cube_Rollup/blob/gh-pages/Cube/Cube%26Rollup.sql" },
+    ],
   },
   "database-scripts": {
     sourceDate: "November, 2019",
@@ -230,6 +234,8 @@ export const projectDetails: Record<ProjectId, ProjectDetails> = {
       "Microsoft SQL Server Management Studio",
     ],
     highlights: [],
-    links: [],
+    links: [
+      { label: "https://github.com/Vhusani/Services-intergration_Reports_Cube_Rollup/blob/gh-pages/Database/DBA.sql", href: "https://github.com/Vhusani/Services-intergration_Reports_Cube_Rollup/blob/gh-pages/Database/DBA.sql" },
+    ],
   },
 };

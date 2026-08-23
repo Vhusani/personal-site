@@ -10,7 +10,13 @@ export function About() {
       <h2 className={styles.heading}>
         <Typewriter phrases={headlines} />
       </h2>
-      <p className={styles.bio}>{profile.bio}</p>
+      <div className={styles.bio}>
+        {profile.bio.map((paragraph) => (
+          <p key={paragraph} className={styles.bioParagraph}>
+            {paragraph}
+          </p>
+        ))}
+      </div>
 
       <dl className={styles.details}>
         {contactDetails.map((detail) => (

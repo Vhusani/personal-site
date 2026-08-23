@@ -28,8 +28,8 @@ export function Sidebar({ activeSection, showPhoto = true }: SidebarProps) {
             className={styles.photo}
             src={profilePhoto}
             alt={`${profile.firstName} ${profile.lastName}`}
-            width={104}
-            height={104}
+            width={160}
+            height={160}
           />
         </div>
       )}

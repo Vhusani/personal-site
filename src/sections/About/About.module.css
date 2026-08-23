@@ -21,6 +21,14 @@
   text-wrap: pretty;
 }
 
+.bioParagraph {
+  margin: 0;
+}
+
+.bioParagraph + .bioParagraph {
+  margin-top: 18px;
+}
+
 .details {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

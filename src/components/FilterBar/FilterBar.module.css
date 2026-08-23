@@ -9,6 +9,8 @@
 .button {
   appearance: none;
   border: 0;
+  /* Keeps every label on one line so the row scrolls rather than growing tall. */
+  white-space: nowrap;
   border-right: var(--border-hairline);
   cursor: var(--cursor-reticle-active);
   font-family: inherit;
@@ -31,4 +33,26 @@
 .active:hover {
   background: var(--color-accent-deep);
   color: var(--color-on-accent);
+}
+
+/* Below the sidebar breakpoint the row would wrap into three or four stacked
+   lines, so it becomes a single scrolling strip instead. `flex: 0 0 auto`
+   stops the buttons being squeezed into unreadable slivers, and
+   `overscroll-behavior-x` keeps a swipe past the last tag from triggering the
+   browser's back gesture. */
+@media (max-width: 799px) {
+  .bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .button {
+    flex: 0 0 auto;
+  }
 }

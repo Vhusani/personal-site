@@ -3,7 +3,7 @@ import type { ContactDetail } from '@/types';
 export const profile = {
   firstName: 'Vhusani',
   lastName: 'Libago',
-  role: 'Full Stack / Software Developer',
+  role: 'Full Stack Software Engineer',
   location: 'South Africa',
   email: 'vhusani.libago@gmail.com',
   whatsappNumber: '+27 71 1160 206',
@@ -11,13 +11,18 @@ export const profile = {
   github: 'https://github.com/vhusani',
   linkedin: 'https://www.linkedin.com/in/vhusani-libago-6a1189123/',
   headline: 'Full Stack Software Developer',
-  bio:
-    'I am a skilled IT professional with a strong background in Full Stack Software Development. ' +
-    'I have experience using various technologies, including .Net, Angular, PHP, T-SQL, Ionic, HTML, ' +
-    'CSS and JavaScript. I hold a Bachelors degree in Informatics, as well as a Diploma in Software ' +
-    'Development. I am a highly motivated individual who enjoys tackling new challenges and continuously ' +
-    'learning new technical skills. My passion lies in using my technical expertise to make a positive ' +
-    'impact on both individuals and organizations',
+  bio: [
+    'I’m a software engineer with experience building web applications, APIs, and the ' +
+      'infrastructure that supports them. My work is primarily in .NET, C#, Angular, and SQL, but it ' +
+      'has taken me beyond application development into CI/CD, Linux, Docker, IIS, authentication, ' +
+      'search infrastructure, and production troubleshooting.',
+    'Over the years I’ve grown increasingly interested in areas where software, infrastructure, and ' +
+      'security meet. I enjoy tackling problems for which the answer is not immediately obvious. Be it ' +
+      'working out why a service has stopped responding or tracking down a problem in an application ' +
+      'and its infrastructure, optimizing a database or search process, or understanding how different ' +
+      'parts of a system interact. I like to learn how things work under the hood and tend to own ' +
+      'problems rather than just the code in front of me.',
+  ],
 } as const;
 
 /**

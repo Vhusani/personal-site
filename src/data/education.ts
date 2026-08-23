@@ -3,7 +3,7 @@ import type { TimelineEntry } from '@/types';
 export const education: TimelineEntry[] = [
   {
     date: '2021 – 2023',
-    title: 'Bachelors degree in Informatics',
+    title: 'Bachelors degree in Informatics and Technology management',
     subtitle: 'Mancosa',
   },
   {
