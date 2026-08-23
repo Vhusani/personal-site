@@ -10,7 +10,7 @@ export const profile = {
   whatsappHref: 'https://wa.me/27711160206',
   github: 'https://github.com/vhusani',
   linkedin: 'https://www.linkedin.com/in/vhusani-libago-6a1189123/',
-  headline: 'Full Stack Software Developer',
+  headline: 'Full Stack Software Engineer',
   bio: [
     'I’m a software engineer with experience building web applications, APIs, and the ' +
       'infrastructure that supports them. My work is primarily in .NET, C#, Angular, and SQL, but it ' +
@@ -32,7 +32,7 @@ export const profile = {
  * and in full.
  */
 export const headlines: string[] = [
-  'Full Stack Software Developer',
+  'Full Stack Software Engineer',
   'Aspiring Application Security Engineer',
   'Aspiring Cloud Security Engineer',
 ];
