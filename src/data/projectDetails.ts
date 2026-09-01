@@ -137,7 +137,7 @@ export const projectDetails: Record<ProjectId, ProjectDetails> = {
       "Delivered a stable, scalable dashboard that significantly reduced maintenance overhead and simplified the loan process for store staff across South Africa.",
     ],
     links: [
-      { label: "http://devdashboard.cashcrusaders.co.za", href: "http://devdashboard.cashcrusaders.co.za" },
+      { label: "http://dashboard.cashcrusaders.co.za", href: "http://dashboard.cashcrusaders.co.za" },
     ],
   },
   "cash2cache": {
